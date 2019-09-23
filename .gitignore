@@ -2,10 +2,12 @@
 .idea
 *.
 *~
+*.pyc
+__pycache__/
 .env
 .venv
 env/
-venv/
+myvenv/
 .DS_Store
 *~
 db.sqlite3
