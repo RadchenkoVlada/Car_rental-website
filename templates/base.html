@@ -11,12 +11,11 @@
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <title>Font connection</title>
     <link href="https://fonts.googleapis.com/css?family=Muli|Noto+Sans+JP&display=swap" rel="stylesheet">
-    <!-- in css file 
+    <!-- in css file
     font-family: 'Muli', sans-serif;
     font-family: 'Noto Sans JP', sans-serif; -->
     
   </head>
-
   <body>
     <header class="my_header">
       <div class="site_title">
@@ -26,7 +25,6 @@
           </li>
         </ul>
       </div>
-
       <div class="menu">
         <ul>
           <li class="dropdown">
@@ -39,41 +37,96 @@
           <li><a href="#about">About us</a></li>
         </ul>
       </div>
-
     </header>
-
-
-
-      <div class="main_content">
-
-        <div class="search">
-           <form name="SearchResultsForm" method="get"  action="handler.php">
-            <div> </div>
-
-            <p style="margin:0px">Search for a car</p>
-            <p style="font-size:20px">Pick up</p>
-            <p style="margin:0px"><input name="pick_up_location" maxlength="30" size="50" placeholder="Type a city or an airport name"></p>
-            </form>
-            <div class="checkboxcontainer">
-              <input id="returntolocation" type="checkbox" checked="checked">
-              <label for="returntolocation" style="font-size:15px" > Return at another location</label>
-            </div> 
-            <p>
-            <input type="submit" value="search"></p>
+    <div class="main_content">
+      <div class="search">
+        <!--   If you click "Submit", the form-data will be sent to a page called "/handler.php".
+        TODO: revise implementation and rework according to django, change file.php to file.py-->
+        <form name="SearchResultsForm" method="get"  action="handler.php">
+          <p style="margin:5px">Search for a car</p>
+          <div style="margin:10px"><input style="font-size:20px;" name="pick_up_location" maxlength="30" size="40" placeholder="Type a city or an airport name"></div>
+        </form>
+        <div>
+          <form style="font-size:25px; margin:25px "action="/action_page.php">
+            Pick up Date (date and time):
+            <div name="date_time">
+              <input type="date" name="day">
+              <select  name="twelveHrPuTime">
+                <option value="7:00 AM">7:00 AM</option>
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="10:00 AM" selected="selected">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+                <option value="9:00 PM">9:00 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="11:00 PM">11:00 PM</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="1:00 AM">1:00 AM</option>
+                <option value="2:00 AM">2:00 AM</option>
+                <option value="3:00 AM">3:00 AM</option>
+                <option value="4:00 AM">4:00 AM</option>
+                <option value="5:00 AM">5:00 AM</option>
+                <option value="6:00 AM">6:00 AM</option>
+              </select>
+            </div>
+          </form>
+          
+          <form style="font-size:25px; margin:25px "action="/action_page.php">
+            Drop-Off Date (date and time):
+            <div name="date_time">
+              <input type="date" id="localdate" name="date">
+              
+              <select  name="twelveHrPuTime">
+                <option value="7:00 AM">7:00 AM</option>
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="10:00 AM" selected="selected">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+                <option value="9:00 PM">9:00 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="11:00 PM">11:00 PM</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="1:00 AM">1:00 AM</option>
+                <option value="2:00 AM">2:00 AM</option>
+                <option value="3:00 AM">3:00 AM</option>
+                <option value="4:00 AM">4:00 AM</option>
+                <option value="5:00 AM">5:00 AM</option>
+                <option value="6:00 AM">6:00 AM</option>
+              </select>
+            </div>
+          </form>
         </div>
-
-        <div class="tagline">
-          Maximum of possibilities. Maximum freedom.
+        <div class="search_button_container" align="center">
+          <a class="search_button" href="add-website-here" target="_blank" rel="nofollow noopener"> Search </a>
         </div>
       </div>
-
-
-
-      <footer>
-        <div class="footer">
-          © 2019. Vlada's Cars Corporation.
-        </div>
-      </footer>
-      
+      <div class="tagline">
+        Maximum of possibilities. Maximum freedom.
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        © 2019. Vlada's Cars Corporation.
+      </div>
+    </footer>
+    
   </body>
 </html>
