@@ -1,57 +1,22 @@
-<!-- We should put HTML that we want to be visible on every page of our site, such as headers, footers, copyright notices, meta tags, and so on, in the base template. Then, any template inheriting from it will automatically get all that common HTML included automatically, and we will only need to override the HTML code for the block we want to customize. You'll see this principal of creating and overriding blocks in base templates used throughout the projects in this book.
--->
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Vlada'sCar.com</title>
-    <meta charset="utf-8">
-    <meta name="author" content="Radchenko Vlada">
-    <meta name="description" content="RentalCars home page website template"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <title>Font connection</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli|Noto+Sans+JP&display=swap" rel="stylesheet">
-    <!-- in css file
-    font-family: 'Muli', sans-serif;
-    font-family: 'Noto Sans JP', sans-serif; -->
-    
-  </head>
-  <body>
-    <header class="my_header">
-      <div class="site_title">
-        <ul>
-          <li>
-            <a class="site_title" href="#home">Vlada'sCars </a>
-          </li>
-        </ul>
-      </div>
-      <div class="menu">
-        <ul>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Sign in</a>
-            <div class="dropdown-content">
-              <a href="#">Sign in</a>
-              <a href="#">Registration</a>
-            </div>
-          </li>
-          <li><a href="#about">About us</a></li>
-        </ul>
-      </div>
-    </header>
+{% extends 'rentalcar/header_footer.html' %}
+{% block content %}
     <div class="main_content">
       <div class="search">
         <!--   If you click "Submit", the form-data will be sent to a page called "/handler.php".
         TODO: revise implementation and rework according to django, change file.php to file.py-->
         <form name="SearchResultsForm" method="get"  action="handler.php">
           <p style="margin:5px">Search for a car</p>
-          <div style="margin:10px"><input style="font-size:20px;" name="pick_up_location" maxlength="30" size="40" placeholder="Type a city or an airport name"></div>
+          <div style="margin:10px">
+            <input style="font-size:20px;" name="pick_up_location" maxlength="30" size="40" placeholder="Type a city or an airport name">
+          </div>
         </form>
         <div>
-          <form style="font-size:25px; margin:25px "action="/action_page.php">
+          <form action="/action_page.php">
             Pick up Date (date and time):
             <div name="date_time">
               <input type="date" name="day">
               <select  name="twelveHrPuTime">
+                <!-- TODO: issue# 18 -->
                 <option value="7:00 AM">7:00 AM</option>
                 <option value="8:00 AM">8:00 AM</option>
                 <option value="9:00 AM">9:00 AM</option>
@@ -80,7 +45,7 @@
             </div>
           </form>
           
-          <form style="font-size:25px; margin:25px "action="/action_page.php">
+          <form action="/action_page.php">
             Drop-Off Date (date and time):
             <div name="date_time">
               <input type="date" id="localdate" name="date">
@@ -122,11 +87,4 @@
         Maximum of possibilities. Maximum freedom.
       </div>
     </div>
-    <footer>
-      <div class="footer">
-        © 2019. Vlada's Cars Corporation.
-      </div>
-    </footer>
-    
-  </body>
-</html>
+{% endblock %}

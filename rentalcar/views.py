@@ -1,14 +1,19 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse
 from django.views.generic import CreateView
+from .models import Tutorial
+from django.contrib.auth.forms import UserCreationForm
 
 
-class UserRegistrationView(CreateView):
-    form_class = UserCreationForm
-    template_name = 'user_registration.html'
+def homepage(request):
+	return render(request,
+ 			template_name='rentalcar/home.html',
+ 			context={"tutorials": Tutorial.objects.all})
 
-    def get_success_url(self):
-        return reverse('home')
+def user_registration(request):
+ 	form = UserCreationForm
+ 	return render(request=request,
+ 				template_name='rentalcar/user_registration.html', 
+ 				context={"form":form})
