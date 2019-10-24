@@ -56,6 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, '/rentalcar/templates/rentalcar')],
+        # 'DIRS': [ r'/Users/vladaradchenko/Documents/Rental_Car_WEB/rentalcar/templates/rentalcar'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
