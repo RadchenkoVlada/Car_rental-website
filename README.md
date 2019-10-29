@@ -19,11 +19,10 @@ Plans: include logo/demo screenshots etc.\
 
 HTML, CSS, Python 3.7.1, framework Django 2.2.5, Database Sqlite and so on...\
 Supporting Programs: Sublime Text 3 - editor with a free evaluation period,
-PyCharm - s an integrated development environment (IDE) used in computer programming, specifically for the Python language\  
+PyCharm - is an integrated development environment (IDE) used in computer programming, specifically for the Python language 
 
 ## Setup
-
-######The instructions for starting a web site locally on a computer are described for users Linux and OS X
+> The instructions for starting a web site locally on a computer are described for users Linux and OS X
 
 First of all to create and run all the web applications that we will develop throughout, you will need working copies 
 of the following software:
@@ -69,8 +68,11 @@ Installing collected packages: Django
 Successfully installed Django-2.2.5
 ```
 
-That's it! You're now ready to use a Django application!
-#####Starting the web server
+That's it! You're now ready to use a Django application! 
+
+
+**Starting the web server**
+
 You need to be in the directory that contains the manage.py file (in the directory where you have loaded project). 
 In the console, we can start the web server by running python manage.py runserver:
 
