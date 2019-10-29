@@ -21,11 +21,17 @@ li {
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    background-color:#333;
-    color: white;
+  position: fixed;
+  height: 25px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  /*margin-bottom: 0px;*/
+  justify-content: center;
+  padding: 15px;
+  background-color:#333;
+  color: white;
+
 }
 
 
@@ -90,7 +96,7 @@ li.sign_in_dropdawn {
 .main_content {
   padding:20px;
   padding-top:50px;
-  height:1800px;
+  height:1000px;
   background-image: url("/static/img/hero.jpg");
   /*background-repeat: no-repeat;*/
   background-size: cover;
@@ -149,7 +155,7 @@ background: green;
 padding: 20px;
 border-radius: 5px;
 display: inline-block;
-border: none;
+border: 10px;
 transition: all 0.4s ease 0s;
 }
  
@@ -168,3 +174,30 @@ transition: all 0.4s ease 0s;
   margin:25px; 
 }
 
+.registration {
+  height: margin: 0 auto;
+  background-color: #26A69A; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #00BFA5, #004D40); /* Standard syntax (must be last) */
+  padding-top: 50px;
+  padding-bottom: 400px;
+
+}
+
+.user_registration {
+  width: 60%;
+  height: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  
+  position: relative; 
+  margin: auto;
+
+  background-color:#FFD54F;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  height: auto;
+  
+  font-size: 20px;
+  font-family: 'Muli', sans-serif;
+}
