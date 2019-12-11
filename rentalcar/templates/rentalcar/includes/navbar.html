@@ -1,0 +1,23 @@
+ <header class="my_header">
+            <a class="site_title" href="/home"> Vlada'sCars </a>
+
+          <div class="menu">
+            <ul>
+              {% if user.is_authenticated %}
+              <li class="sign_in_dropdawn">
+                <a href="/account"> &#10084; {{user.username|title}} Account</a>
+                <a href="/logout">Logout</a>
+                <li><a href="/">About us</a></li>
+                  {% else %}
+                  <li class="sign_in_dropdawn">
+                    <a href="/" class="dropbtn">Sign in</a>
+                    <div class="dropdown-content">
+                    <a href="/login">Sign in</a>
+                    <a href="/user_registration">Registration</a>
+                    <li><a href="/">About us</a></li>
+                  {% endif %}
+                </div>
+              </li>
+            </ul>
+          </div>
+    </header>

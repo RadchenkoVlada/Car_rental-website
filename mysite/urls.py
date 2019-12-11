@@ -23,6 +23,6 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = [
-    path('', include('rentalcar.urls')),
     path('admin/', admin.site.urls),
+    path('', include('rentalcar.urls')),
 ]

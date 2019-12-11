@@ -85,6 +85,17 @@
       </div>
       <div class="tagline">
         Maximum of possibilities. Maximum freedom.
-      </div>
+      </div>      
     </div>
+
+    <div class="test_msg">
+      {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success'%}
+            AAAAAAAAAAA
+            {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+
 {% endblock %}
