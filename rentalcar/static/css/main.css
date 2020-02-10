@@ -36,9 +36,9 @@ li {
   display: grid;
 /*each number is column size. First column 650 px,
 second column - flexible(to the end of screen)*/
-  grid-template-columns: 650px 1fr;
+  grid-template-columns: 600px 1fr;
 /*each number is row size. The only row 650 px*/
-  grid-template-rows: 650px;
+  grid-template-rows: 600px;
   /*We will get grid with one row and 2 columns*/
 }
 
@@ -47,17 +47,15 @@ second column - flexible(to the end of screen)*/
 }
 
 .search {
-  margin: 120px;
+  margin: 100px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   padding: 20px;
   background-color:#FFD54F;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
-  font-size: 30px;
-  font-family: 'Muli', sans-serif;
-
+  font-size: 20px;
   grid-column: 1 / 2;
 }
 
@@ -75,7 +73,7 @@ second column - flexible(to the end of screen)*/
 }
 
 .search_button_container {
-  margin: 60px;
+  margin-top: 60px;
 }
 
 .search_button {
@@ -85,7 +83,6 @@ text-decoration: none;
 background: green;
 padding: 20px;
 border-radius: 5px;
-display: inline-block;
 border: 10px;
 transition: all 0.4s ease 0s;
 }
@@ -113,8 +110,6 @@ transition: all 0.4s ease 0s;
 .registration {
   height: auto;
   margin: 0 auto;
-  /*background-color: #26A69A; !* For browsers that do not support gradients *!*/
-  /*background-image: linear-gradient(to bottom right, #00BFA5, #004D40); !* Standard syntax (must be last) *!*/
   padding-top: 50px;
   padding-bottom: 400px;
 }
@@ -135,7 +130,6 @@ transition: all 0.4s ease 0s;
   height: auto;
 
   font-size: 20px;
-  font-family: 'Muli', sans-serif;
 }
 
 .my_popup {
