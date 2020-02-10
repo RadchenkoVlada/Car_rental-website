@@ -1,8 +1,4 @@
-body {
-  margin:0;
-  flex-grow: 1;
-  overflow: auto;
-}
+{% load static %}
 
 ul {
   list-style-type: none;
@@ -15,99 +11,30 @@ li {
   float: left;
 }
 
-.my_header {
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  background-color: #333;
-  flex-shrink: 0;
-}
-
-footer {
-  position: fixed;
-  height: 25px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  flex-shrink: 0;
-  /*margin-bottom: 0px;*/
-  justify-content: center;
-  padding: 15px;
-  background-color:#333;
-  color: white;
-
-}
-
-
 .menu {
   float: right;
 }
 
-.site_title {
-  display: inline-block;
-  padding: 14px 16px;
-  float: left;
-  color: white;
-  background-color: #00695C;
-  text-decoration: none;
-  text-align: right: 0;
-}
-
-li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.site_title), .sign_in_dropdawn:hover .dropbtn {
-  background-color: #E0F2F1;
-  color: black;
-}
-
-li.sign_in_dropdawn {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.sign_in_dropdawn:hover .dropdown-content {
-  display: block;
-}
 
 /*Main Content*/
+
+.container-fluid {
+    background-image: url("/static/img/hero.jpg");
+    background-size: cover;
+}
 
 .main_content {
   padding:20px;
   padding-top:50px;
+  padding-right: 0px;
+  padding-left: 0px;
   height:1000px;
-  background-image: url("/static/img/hero.jpg");
-  /*background-repeat: no-repeat;*/
-  background-size: cover;
+  /*background-image: url("/static/img/hero.jpg");*/
+  /*background-size: cover;*/
 
 /*this is turn on grid layout*/
   display: grid;
-/*each number is column size. First column 650 px, 
+/*each number is column size. First column 650 px,
 second column - flexible(to the end of screen)*/
   grid-template-columns: 650px 1fr;
 /*each number is row size. The only row 650 px*/
@@ -127,7 +54,7 @@ second column - flexible(to the end of screen)*/
   background-color:#FFD54F;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  
+
   font-size: 30px;
   font-family: 'Muli', sans-serif;
 
@@ -162,7 +89,7 @@ display: inline-block;
 border: 10px;
 transition: all 0.4s ease 0s;
 }
- 
+
 .search_button:hover {
 background: #434343;
 letter-spacing: 1px;
@@ -176,34 +103,37 @@ transition: all 0.4s ease 0s;
 /* form for choosing time on home.html */
 .form {
   font-size:25px;
-  margin:25px; 
+  margin:25px;
 }
 
+.about {
+    padding-bottom: 300px;
+}
 
 .registration {
   height: auto;
   margin: 0 auto;
-  background-color: #26A69A; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom right, #00BFA5, #004D40); /* Standard syntax (must be last) */
+  /*background-color: #26A69A; !* For browsers that do not support gradients *!*/
+  /*background-image: linear-gradient(to bottom right, #00BFA5, #004D40); !* Standard syntax (must be last) *!*/
   padding-top: 50px;
   padding-bottom: 400px;
 }
 
-.user_registration {
+.yellow_content_box {
   width: 60%;
   height: 50%;
   padding-right: 15px;
   padding-left: 15px;
   padding-bottom: 15px;
-  
-  position: static; 
+
+  position: static;
   margin: auto;
 
   background-color:#FFD54F;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   height: auto;
-  
+
   font-size: 20px;
   font-family: 'Muli', sans-serif;
 }

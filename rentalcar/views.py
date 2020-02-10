@@ -16,6 +16,13 @@ def homepage(request):
     return render(request,
             template_name='rentalcar/home.html')
 
+def about(request):
+    return render(request,
+            template_name='rentalcar/about.html')
+
+
+
+
 def user_registration(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -64,7 +71,7 @@ def login_request(request):
             else:
                 messages.error(request, "Invalid username or password")
         else:
-            smessages.error(request, "Invalid username or password")
+            messages.error(request, "Invalid username or password")
     
 
     form = AuthenticationForm()
