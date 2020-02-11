@@ -20,6 +20,9 @@ def about(request):
     return render(request,
             template_name='rentalcar/about.html')
 
+def search(request):
+    return render(request,
+            template_name='rentalcar/search.html')
 
 
 
