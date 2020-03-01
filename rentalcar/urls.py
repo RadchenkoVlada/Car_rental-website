@@ -13,6 +13,6 @@ urlpatterns = [
     path('logout/', views.logout_request, name='logout'),
     path('login/', views.login_request, name='login'),
     path('about/', views.about, name='about'),
-    path('search/', views.search, name='search'),
-
+    path('search/', views.car_list, name='car_list'),
+    # path('search/', views.CarListView.as_view(), name='search'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

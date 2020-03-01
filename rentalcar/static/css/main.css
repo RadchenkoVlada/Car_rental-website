@@ -1,5 +1,9 @@
 {% load static %}
 
+body {
+    margin-bottom: 32px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -82,11 +86,12 @@ li {
 
 .container-fluid {
     background-image: url("/static/img/hero.jpg");
+
     background-size: cover;
 }
 
 .main_content {
-  padding:20px;
+  /*padding:100px;*/
   padding-top:50px;
   padding-right: 0px;
   padding-left: 0px;
@@ -105,7 +110,8 @@ second column - flexible(to the end of screen)*/
 }
 
 .img {
- width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
 }
 
 .search {
@@ -170,7 +176,7 @@ transition: all 0.4s ease 0s;
 }
 /*Search page*/
 .search_page {
-  height: 1000px;
+  /*height: 2000px;*/
 }
 
 .registration {

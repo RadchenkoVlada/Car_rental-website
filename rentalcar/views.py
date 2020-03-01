@@ -1,3 +1,4 @@
+# Django
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -8,7 +9,11 @@ from django.views.generic import CreateView
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+# local Django
 from .forms import RegisterForm
+from .models import Car
 
 
 def homepage(request):
@@ -21,12 +26,15 @@ def about(request):
                   template_name='rentalcar/about.html')
 
 
-def search (request):
-    return render(request,
-                  template_name='rentalcar/search.html')
+def car_list(request):
+    cars = Car.objects.all()
+    paginator = Paginator(cars, 12)  # Show 12 cars per page
+    page = request.GET.get('page', 1)  # method get() returns the value by the key, but not raise exception (default is 1).
+    cars = paginator.get_page(page)
+    return render(request=request, template_name='rentalcar/search_page/search.html', context={'cars': cars})
 
 
-def user_registration (request):
+def user_registration(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -53,13 +61,13 @@ def user_registration (request):
                   context={"form": form})
 
 
-def logout_request (request):
+def logout_request(request):
     logout(request)
     messages.info(request, "Logget out successfully!")
     return redirect("rentalcar:homepage")
 
 
-def login_request (request):
+def login_request(request):
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
