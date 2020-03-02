@@ -102,20 +102,29 @@ Congratulations! You've just launched my first website using a web server! Isn't
 
 My task is to track the financial performance of the rental. There are a number of **cars** of various brands in your 
 fleet, which are additionally stored data such as
-* car number
+* car name
+* cost
+* photo
+* number of passengers
 * cost
 * year of manufacture 
 * type
+* brand
+* availability of air conditioning or not
+* availability of automatic transmission or not
+
 
 Each car has its own rental cost.
 
 **Customers** apply to the rental center. All customers are required to register, in which standard information 
 * last name 
 * first name
+* username
 * email address
-* telephone number 
+* password
 
 is collected about them.\
+In the future, these users will be able revisiting the site using their unique username and password through "Sign in" page.\
 But on the other hand, you can be a guest and first pick up a car for yourself, and then register.
 \
 All quoted rates are fully cancellable before 48 hours before pick up the car.

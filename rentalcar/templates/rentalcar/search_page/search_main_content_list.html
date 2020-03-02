@@ -67,9 +67,9 @@
             {% endfor %}
         </div>
     {% if cars.paginator.count != 0 %}
-		<nav aria-label="...">
-		  <ul class="pagination">
-		  	{% if cars.has_previous %}
+        <nav aria-label="...">
+            <ul class="pagination indent_bottom">
+                {% if cars.has_previous %}
 			    <li class="page-item">
 		      		<a class="page-link" href="?page={{ cars.previous_page_number }}" tabindex="-1">Previous</a>
 			{% else %}
@@ -96,7 +96,6 @@
 		    	</li>
 		  </ul>
 		</nav>
-        <div></div>
 {% endif %}
 </div>
 

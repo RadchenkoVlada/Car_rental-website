@@ -27,6 +27,7 @@ li {
     padding-left: 0;
     margin-bottom: 0;
 }
+
 .thumbnail
 {
     margin-bottom: 30px;
@@ -57,11 +58,13 @@ li {
 {
     margin-right: 10px;
 }
+
 .item.list-group-item .thumbnail
 {
     margin-bottom: 0px;
     display: inline-block;
 }
+
 .item.list-group-item .caption
 {
     float: left;
@@ -126,7 +129,6 @@ second column - flexible(to the end of screen)*/
   grid-column: 1 / 2;
 }
 
-
 .tagline {
   margin: 10px;
   margin-top: 100px;
@@ -163,7 +165,6 @@ box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 transition: all 0.4s ease 0s;
 }
 
-
 /* form for choosing time on home.html */
 .form {
   font-size:25px;
@@ -174,6 +175,8 @@ transition: all 0.4s ease 0s;
     padding-top: 50px;
     padding-bottom: 300px;
 }
+
+
 /*Search page*/
 .search_page {
   /*height: 2000px;*/
@@ -207,13 +210,17 @@ transition: all 0.4s ease 0s;
 .my_popup {
   width: 160px;
   background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px;
-  position: fixed;
-  z-index: 1;
-  top: 10%;
-  left: 80%;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: fixed;
+    z-index: 1;
+    top: 10%;
+    left: 80%;
 }
 
+/*this class has created for */
+.indent_bottom {
+    margin-bottom: 20px;
+}

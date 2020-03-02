@@ -1,27 +1,24 @@
 # Django
-from django.shortcuts import render, redirect
-
-# Create your views here.
-from rentalcar.forms import RegisterForm
-
-from django.urls import reverse
-from django.views.generic import CreateView
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.core.paginator import Paginator
+from django.shortcuts import render, redirect
 
 # local Django
 from .forms import RegisterForm
 from .models import Car
 
 
-def homepage(request):
+# Create your views here.
+
+
+def homepage (request):
     return render(request,
                   template_name='rentalcar/home.html')
 
 
-def about(request):
+def about (request):
     return render(request,
                   template_name='rentalcar/about.html')
 
@@ -29,7 +26,8 @@ def about(request):
 def car_list(request):
     cars = Car.objects.all()
     paginator = Paginator(cars, 12)  # Show 12 cars per page
-    page = request.GET.get('page', 1)  # method get() returns the value by the key, but not raise exception (default is 1).
+    page = request.GET.get('page',
+                           1)  # method get() returns the value by the key, but not raise exception (here default is 1).
     cars = paginator.get_page(page)
     return render(request=request, template_name='rentalcar/search_page/search.html', context={'cars': cars})
 
