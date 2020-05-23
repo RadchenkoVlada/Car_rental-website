@@ -1,0 +1,22 @@
+{% extends "rentalcar/header_footer.html" %}
+
+{% block content %}
+ <div class="registration">
+	<div class="yellow_content_box">
+		<form method="post">
+		<!-- Cross Site Request Forgery protection -->
+			{% csrf_token %}
+			
+			<h1>Sign in</h1>
+			{{form.as_p}}
+			
+			<div class="search_button_container" align="center">
+			<button type="submit" class="search_button" href="add-website-here" target="_blank" rel="nofollow noopener"> Sign in </button>
+			
+		</form>
+		<p>
+		If you don't already have an account, <a href="/user_registration"><strong> Register </strong></a> for one.
+		</p>
+	</div>
+</div>
+{% endblock %}
